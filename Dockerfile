@@ -11,6 +11,12 @@ RUN apk add --no-cache --virtual build-dependencies \
   libxml2-dev \
   libxslt-dev \
   && gem install html-proofer \
+  && gem install html-pipeline \
+  && gem install commonmarker \
+  && gem install activesupport \
+  && gem install nokogiri \
+  && gem install escape_utils \
+  && gem install fileutils \
   && apk del build-dependencies
 
 ENTRYPOINT ["htmlproofer"]
